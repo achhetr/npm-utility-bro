@@ -1,7 +1,8 @@
 
-const RandomLowerString = 'abcdefghijklmnopqrstuvwxyz';
-const RandomUpperString = RandomLowerString.toUpperCase();
-const RandomNumber = '0123456789';
+const LowerChar = 'abcdefghijklmnopqrstuvwxyz';
+const UpperChar = LowerChar.toUpperCase();
+const NumSet = '0123456789';
+const SpecialChar = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
 function randomStringGenerator(len = 5, value = 3){
     let randomString = '';
@@ -10,16 +11,19 @@ function randomStringGenerator(len = 5, value = 3){
     // value = 1 select only lowercase alphabet, 
     // value = 2 select only lowercase and uppercase alphabet, 
     // value = 3 select number, lowercase and uppercase alphabet, 
-    selectString = value >= 1 ? selectString += RandomLowerString : selectString += '';
-    selectString = value >= 2 ? selectString += RandomUpperString : selectString += '';
-    selectString = value >= 3 ? selectString += RandomNumber : selectString += '';
+    // value = 4 select special character, number, lowercase and uppercase alphabet, 
+    selectString += value >= 1 ? LowerChar : '';
+    selectString += value >= 2 ? UpperChar : '';
+    selectString += value >= 3 ? NumSet : '';
+    selectString += value >= 4 ? SpecialChar : '';
 
     for (let i = 0; i < len; i++) {
-        var randomPoz = Math.floor(Math.random() * selectString.length);
-        randomString += selectString.substring(randomPoz,randomPoz+1);
+        let randomPos = Math.floor(Math.random() * selectString.length);
+        randomString += selectString[randomPos];
     }
     return randomString;
 }
 
 module.exports = randomStringGenerator;
+
 
