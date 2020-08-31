@@ -1,15 +1,14 @@
 {
-  "name": "dynamic-url-js",
+  "name": "@akashbro/utility-bro",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a common utility function to reduce your workload",
   "main": "getDomain.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "randomstring": "^1.1.5"
   }
 }
