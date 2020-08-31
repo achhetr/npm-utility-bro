@@ -5,6 +5,8 @@ const NumSet = '0123456789';
 const SpecialChar = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
 
 function randomStringGenerator(len = 5, value = 3){
+    // use len to select length of a random string
+
     let randomString = '';
     let selectString = '';
 
