@@ -1,6 +1,6 @@
 {
   "name": "utility-bro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "this is a common utility function to reduce your workload",
   "main": "getDomain.js",
   "scripts": {
