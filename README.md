@@ -29,7 +29,7 @@ npm i utility-bro
 ## Usage
 
 ```javascript
-const randomStringGenerator = require("./randomStringGenerator");
+const {randomStringGenerator} = require('utility-bro');
 
 
     // use len to select length of a random string
